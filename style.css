@@ -34,6 +34,7 @@ h1{
 .box{
     height: 18vmin;
     width: 18vmin;
+    display: flex;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
@@ -75,3 +76,26 @@ h1{
     height: 30px;
 }
 
+.cats{
+    height: 15vmin;
+    width: 30vmin;
+    align-self: center;
+    justify-self: center;
+}
+
+/* .star{
+    height: 5px;
+    width: 50px;
+    align-self: center;
+    justify-self: center;  
+} */
+
+/* .winner{
+    background-color: #F9DFDF;
+    color: #fff;
+    font-family: serif;
+    width: 25vmin;
+    height: 25vmin;
+    padding: 5px;
+    border-radius: 5px;
+} */
