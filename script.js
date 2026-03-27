@@ -54,19 +54,12 @@ const winner = () => {
                  
                     if (pos1val === pos2val && pos2val === pos3val) {
                         console.log(3);
-                        alert('won');
-                
-                        
+                        winnerTag.style.display="block";                        
 
-                    }
+                    }else{
+                                     
+                                      }
                 }
             }
 }
-
-resetBtn.addEventListener('click',function () {
-    turnO=true;
-}
-
-)
-
 console.log(1);

@@ -81,6 +81,7 @@ h1{
     width: 30vmin;
     align-self: center;
     justify-self: center;
+    animation: tilt 1s ;
 }
 
 /* .star{
@@ -90,12 +91,39 @@ h1{
     justify-self: center;  
 } */
 
-/* .winner{
-    background-color: #F9DFDF;
+.winner{
+    background-color: #e39191;
     color: #fff;
-    font-family: serif;
+    font-family: cursive;
     width: 25vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
     height: 25vmin;
     padding: 5px;
     border-radius: 5px;
-} */
+    animation: win 1.5s ease-in-out linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    box-shadow: #efb4b4 1px 1px 1px;
+}
+
+.winner:hover{
+    box-shadow: rgba(239, 118, 118, 0.2)  ;
+}
+
+@keyframes tilt{
+    0%{
+        transform: rotate(-30deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(-30deg);
+    }
+}
