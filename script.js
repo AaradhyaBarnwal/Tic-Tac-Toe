@@ -54,7 +54,10 @@ const winner = () => {
                  
                     if (pos1val === pos2val && pos2val === pos3val) {
                         console.log(3);
-                        winnerTag.style.display="block";                        
+                        winnerTag.innerHTML=`<h2>${pos1val} player<h2>You won the game.</h2>
+                        <h2>Congratulations</h2>
+                          <img src="assets/cat.png" class="cats" alt=""> </h2>`
+                        winnerTag.style.display="block";
 
                     }else{
                                      
@@ -63,3 +66,17 @@ const winner = () => {
             }
 }
 console.log(1);
+
+const resetGame = () =>{
+    turnO = true;
+
+    boxTag.forEach(box =>{
+            box.innerText='';
+            box.disabled=false;
+        
+        });
+        winnerTag.innerHTML=``;
+        winnerTag.style.display='none';
+}
+
+resetBtn.addEventListener("click",resetGame)

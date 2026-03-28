@@ -15,7 +15,7 @@ body{
     align-items: center;
 }
 
-h1{
+.head{
     background-color: #F5AFAF;
     color: #fff;
     font-family: cursive;
@@ -39,7 +39,7 @@ h1{
     justify-content: center;
     align-items: center;
     border: none;
-    font-size: 8vmin;
+    font-size: 12vmin;
     color: #fff;
     font-family: cursive;
     background-color: #F9DFDF;
@@ -81,6 +81,9 @@ h1{
     width: 30vmin;
     align-self: center;
     justify-self: center;
+}
+
+.cats:hover{
     animation: tilt 1s ;
 }
 
@@ -95,12 +98,12 @@ h1{
     background-color: #e39191;
     color: #fff;
     font-family: cursive;
-    width: 25vmin;
+    width: 40vmin;
     display: flex;
     align-items: center;
     justify-content: center;
     display: none;
-    height: 25vmin;
+    height: 40vmin;
     padding: 5px;
     border-radius: 5px;
     animation: win 1.5s ease-in-out linear;
