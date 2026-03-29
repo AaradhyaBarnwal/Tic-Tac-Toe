@@ -119,7 +119,7 @@ body {
     display: none;
     height: 40vmin;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 20px;
     animation: win 1.5s ease-in-out linear;
     position: fixed;
     top: 50%;
