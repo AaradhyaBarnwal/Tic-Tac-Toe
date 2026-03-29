@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: #B0DB9C;
     text-align: center;
 }
 
-.con{
+.con {
     height: 70vh;
     display: flex;
     justify-content: center;
@@ -16,26 +16,29 @@ body{
     width: 100%;
 }
 
-.heading{
+.heading {
     display: flex;
     align-items: center;
     background-color: #F5AFAF;
+    box-shadow: 0 2px 0 #de8d9c;
     justify-content: center;
+    margin-bottom: 12px;
 }
 
-.heart{
+.heart {
     vertical-align: middle;
     margin-bottom: 26px;
     align-self: center;
 }
 
-.head{
+.head {
     line-height: 1;
     color: #fff;
-        font-family: 'Bitcount Mono Single',monospace;
+    font-family: 'Bitcount Mono Single', monospace;
+    text-shadow: 3px 3px 0px #d47070;
 }
 
-.game{
+.game {
     height: 60vmin;
     width: 60vmin;
     display: flex;
@@ -45,7 +48,7 @@ body{
     gap: 1.5vmin;
 }
 
-.box{
+.box {
     transition: transform 0.1s;
     height: 18vmin;
     width: 18vmin;
@@ -56,70 +59,58 @@ body{
     border: none;
     font-size: 12vmin;
     color: #fff;
-    font-family: "Comic Relief" ,cursive;
+    font-family: "Comic Relief", cursive;
     background-color: #F9DFDF;
     box-shadow: 0 4px 12px rgba(200, 100, 100, 0.2);
 }
 
-.box:hover{
-    box-shadow: 0 4px 16px 0px rgba(232,154,170,0.45);
+.box:hover {
+    box-shadow: 0 4px 16px 0px rgba(232, 154, 170, 0.45);
     transform: scale(1.03);
 }
 
-.Reset{
-    width:200px;
+.Reset {
+    width: 200px;
     height: 50px;
     border-radius: 10px;
-    background-color: #F9DFDF;
     font-size: x-large;
     font-weight: 900;
     font-family: "Comic Relief", cursive;
+    border: 5px white solid;
     color: #e6617c;
     text-decoration: wavy;
+    background-color: transparent;
     border: none;
     outline: none;
+    margin-bottom: 10px;
+    background-color: #F9DFDF;
+    box-shadow: 0px 5px 0px #e03a58;
 }
 
-.Reset:hover{
+.Reset:hover {
+    box-shadow: 0px 5px 0px #c46161;
+    margin-bottom: 15px;
     width: 250px;
     height: 60px;
-    box-shadow: 0 4px 16px rgba(238, 126, 126, 0.2);
 }
 
-.Reset:active{
+.Reset:active {
     width: 150px;
     height: 30px;
 }
 
-/* .candy{
-   height: 265px;
-    width: 435px;
-    align-self: center;
-    justify-self: center; 
-    margin-bottom: 30px;
-} */
-
-.cats{
+.cats {
     height: 15vmin;
     width: 30vmin;
     align-self: center;
     justify-self: center;
-    animation: tilt 1s ease-in-out ;
+    animation: tilt 1s ease-in-out;
 }
 
-/* .cats:hover{
-} */
-
-/* .star{
-    height: 5px;
-    width: 50px;
-    align-self: center;
-    justify-self: center;  
-} */
-
-.winner{
-    background-color: #e39191;
-    color: #fff;
+.winner {
+    background-color: #fff0f3;
+    border: 3px solid #f5b8c4;
+    color: #dd4261;
     font-family: "Sour Gummy", sans-serif;
     width: 40vmin;
     display: none;
@@ -135,53 +126,67 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    box-shadow: #efb4b4 1px 1px 1px;
+    box-shadow: 0 8px 24px rgba(220, 100, 120, 0.2);
     overflow: hidden;
 }
 
-.winner:hover{
-    box-shadow: 0 6px 20px rgba(239, 118, 118, 0.4)  ;
+.winner:hover {
+    box-shadow: 0 6px 20px rgba(239, 118, 118, 0.4);
 }
 
-@keyframes tilt{
-    0%{
+@keyframes tilt {
+    0% {
         transform: rotate(-30deg);
     }
-    50%{
+
+    50% {
         transform: rotate(30deg);
     }
-    100%{
+
+    100% {
         transform: rotate(-30deg);
     }
 }
 
-@keyframes win{
-    0%{
-        transform: translate(-50%, -50%)
-        scale(0.5);
+@keyframes win {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
         opacity: 0;
     }
-    100%{
-        transform: translate(-50%, -50%)
-        scale(1);
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
 }
 
-.abe{
+.abe {
     border-radius: 15px;
     background-color: #dd4261;
     color: #fff;
-    font-family: "Comic Relief" , cursive;
+    font-family: "Comic Relief", cursive;
     margin-top: 5px;
     width: 190px;
     height: 30px;
     align-self: center;
     justify-self: center;
     padding: 3px;
-    box-shadow: 0 4px 8px rgba(240, 135, 135, 0.4);
+    box-shadow: 0 5px 0px #a02f4a;
+
 }
 
-.abe:hover{
+.abe:hover {
     box-shadow: 0 4px 12px rgba(240, 135, 135, 0.4);
+}
+
+.X {
+    color: #e6617c;
+}
+
+.O {
+    color: #7bc4a0;
+}
+
+.congo {
+    color: #e89898;
 }
