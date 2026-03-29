@@ -2,8 +2,6 @@ let boxTag = document.querySelectorAll(".box");
 let resetBtn = document.querySelector('.Reset');
 let winnerTag = document.querySelector('.winner');
 let conTag = document.querySelector(".con");
-
-
 let turnO = true;
 
 const winPatterns = [
@@ -34,6 +32,7 @@ boxTag.forEach((box)=> {
     box.disabled = true;
 
     winner();
+    draw();
 
     })
 }) ;
@@ -58,10 +57,9 @@ const winner = () => {
                         <h2>Congratulations</h2>
                           <img src="assets/cat.png" class="cats" alt=""> </h2>`
                         winnerTag.style.display="block";
+                        damn();
 
-                    }else{
-                                     
-                                      }
+                    }else {}
                 }
             }
 }
@@ -77,6 +75,38 @@ const resetGame = () =>{
         });
         winnerTag.innerHTML=``;
         winnerTag.style.display='none';
+        damn();
+
 }
 
 resetBtn.addEventListener("click",resetGame)
+
+function gurl() {
+    resetBtn.innerHTML=`<p>Reset</p>`
+}
+
+function damn () {
+    if ( winnerTag.style.display==="block") {
+    resetBtn.innerHTML=`<p>New Game</p>`;
+} else if(winnerTag.style.display==="none") {
+    resetBtn.innerHTML=`<p>Reset</p>`;
+}
+
+}                       
+const draw = () => {
+    if (winnerTag.style.display === 'block') {return;} 
+
+    let allFilled = [...boxTag].every(box => box.innerText != '')
+
+    if (allFilled) {
+        winnerTag.innerHTML=`
+        <h2>It's a Draw!</h2> 
+        <h2>Good Game!</h2>
+        <img src="assets/candy.png" class="candy" alt="">`;
+
+        winnerTag.style.display = "block";
+        damn();
+    }
+
+
+}

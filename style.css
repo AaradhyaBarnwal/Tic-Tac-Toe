@@ -13,10 +13,24 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    background-color: #F5AFAF;
+    justify-content: center;
+}
+
+.heart{
+    vertical-align: middle;
+    margin-bottom: 26px;
+    align-self: center;
 }
 
 .head{
-    background-color: #F5AFAF;
+    line-height: 1;
     color: #fff;
     font-family: cursive;
 }
@@ -74,6 +88,13 @@ body{
 .Reset:active{
     width: 150px;
     height: 30px;
+}
+
+.candy{
+   height: 25vmin;
+    width: 50vmin;
+    align-self: center;
+    justify-self: center; 
 }
 
 .cats{
