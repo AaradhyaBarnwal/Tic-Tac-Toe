@@ -2,6 +2,7 @@ let boxTag = document.querySelectorAll(".box");
 let resetBtn = document.querySelector('.Reset');
 let winnerTag = document.querySelector('.winner');
 let conTag = document.querySelector(".con");
+let playerTurnTag = document.querySelector('.abe');
 let turnO = true;
 
 const winPatterns = [
@@ -24,12 +25,15 @@ boxTag.forEach((box)=> {
 // <img src="assets/cat.png" class="cats" alt="">
 //         `;
         turnO = false;
+            chalNa("O");
     }else{
         box.innerText='O';
     //    box.innerHTML=`<h1>O</h1>`;
         turnO = true;
+        chalNa('X');
     }
     box.disabled = true;
+
 
     winner();
     draw();
@@ -53,14 +57,18 @@ const winner = () => {
                  
                     if (pos1val === pos2val && pos2val === pos3val) {
                         console.log(3);
-                        winnerTag.innerHTML=`<h2>${pos1val} player<h2>You won the game.</h2>
+                        winnerTag.innerHTML=`<h2>${pos1val} player<h2>You won the game🌸</h2>
                         <h2>Congratulations</h2>
                           <img src="assets/cat.png" class="cats" alt=""> </h2>`
-                        winnerTag.style.display="block";
+                        winnerTag.style.display="grid";
+        disableAllBoxes();
                         damn();
 
                     }else {}
+
+
                 }
+
             }
 }
 console.log(1);
@@ -75,6 +83,7 @@ const resetGame = () =>{
         });
         winnerTag.innerHTML=``;
         winnerTag.style.display='none';
+            playerTurnTag.innerHTML=`<h3>X's player turn</h3>`;
         damn();
 
 }
@@ -86,7 +95,7 @@ function gurl() {
 }
 
 function damn () {
-    if ( winnerTag.style.display==="block") {
+    if ( winnerTag.style.display==="grid") {
     resetBtn.innerHTML=`<p>New Game</p>`;
 } else if(winnerTag.style.display==="none") {
     resetBtn.innerHTML=`<p>Reset</p>`;
@@ -94,19 +103,32 @@ function damn () {
 
 }                       
 const draw = () => {
-    if (winnerTag.style.display === 'block') {return;} 
+
+    if (winnerTag.style.display === 'grid') {return;} 
 
     let allFilled = [...boxTag].every(box => box.innerText != '')
 
     if (allFilled) {
         winnerTag.innerHTML=`
-        <h2>It's a Draw!</h2> 
-        <h2>Good Game!</h2>
-        <img src="assets/candy.png" class="candy" alt="">`;
+        <h2>It's a Draw!🤝</h2>
+        
+        <h2>Try Again</h2>  
+        
+        `
+        ;
 
-        winnerTag.style.display = "block";
+        winnerTag.style.display = "grid";
+        disableAllBoxes();
         damn();
     }
 
 
 }
+
+function chalNa(players) {
+    playerTurnTag.innerHTML=`<h3>Player ${players}'s turn</h3>`;
+}
+
+const disableAllBoxes = () => {
+boxTag.forEach(box => box.disabled = true);
+};

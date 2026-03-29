@@ -46,6 +46,7 @@ body{
 }
 
 .box{
+    transition: transform 0.1s;
     height: 18vmin;
     width: 18vmin;
     display: flex;
@@ -82,7 +83,7 @@ body{
 .Reset:hover{
     width: 250px;
     height: 60px;
-    box-shadow: rgba(238, 126, 126, 0.2);
+    box-shadow: 0 4px 16px rgba(238, 126, 126, 0.2);
 }
 
 .Reset:active{
@@ -90,23 +91,24 @@ body{
     height: 30px;
 }
 
-.candy{
-   height: 25vmin;
-    width: 50vmin;
+/* .candy{
+   height: 265px;
+    width: 435px;
     align-self: center;
     justify-self: center; 
-}
+    margin-bottom: 30px;
+} */
 
 .cats{
     height: 15vmin;
     width: 30vmin;
     align-self: center;
     justify-self: center;
+    animation: tilt 1s ease-in-out ;
 }
 
-.cats:hover{
-    animation: tilt 1s ;
-}
+/* .cats:hover{
+} */
 
 /* .star{
     height: 5px;
@@ -120,7 +122,7 @@ body{
     color: #fff;
     font-family: cursive;
     width: 40vmin;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     display: none;
@@ -128,16 +130,17 @@ body{
     padding: 5px;
     border-radius: 5px;
     animation: win 1.5s ease-in-out linear;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
     box-shadow: #efb4b4 1px 1px 1px;
+    overflow: hidden;
 }
 
 .winner:hover{
-    box-shadow: rgba(239, 118, 118, 0.2)  ;
+    box-shadow: 0 6px 20px rgba(239, 118, 118, 0.4)  ;
 }
 
 @keyframes tilt{
@@ -150,4 +153,35 @@ body{
     100%{
         transform: rotate(-30deg);
     }
+}
+
+@keyframes win{
+    0%{
+        transform: translate(-50%, -50%)
+        scale(0.5);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-50%, -50%)
+        scale(1);
+        opacity: 1;
+    }
+}
+
+.abe{
+    border-radius: 15px;
+    background-color: #dd4261;
+    color: #fff;
+    font-family: cursive;
+    margin-top: 5px;
+    width: 190px;
+    height: 30px;
+    align-self: center;
+    justify-self: center;
+    padding: 3px;
+    box-shadow: 0 4px 8px rgba(240, 135, 135, 0.4);
+}
+
+.abe:hover{
+    box-shadow: 0 4px 12px rgba(240, 135, 135, 0.4);
 }
